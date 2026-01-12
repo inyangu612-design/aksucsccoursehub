@@ -1,0 +1,291 @@
+/* ============================================
+   AKSU COMPUTER SCIENCE HUB - OFFICIAL THEME
+   Color Scheme: #00512C (Green), #F7941D (Orange)
+   ============================================ */
+
+/* CSS Variables for Consistent Color Management */
+:root {
+    --aksu-primary: #00512C;      /* Official Dark Green */
+    --aksu-primary-dark: #003A1F; /* Darker shade for hover */
+    --aksu-primary-light: #E6F0EB; /* Light tint for backgrounds */
+    --aksu-accent: #F7941D;       /* Official Orange */
+    --aksu-accent-dark: #D47A0A;  /* Darker orange for hover */
+    --aksu-accent-light: #FEF4E7; /* Light orange tint */
+    --aksu-white: #FFFFFF;
+    --aksu-black: #000000;
+    --aksu-gray-light: #F5F5F5;
+    --aksu-gray: #666666;
+    --aksu-gray-dark: #333333;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --box-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --border-radius: 8px;
+}
+
+/* Reset & Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--aksu-gray-dark);
+    background: linear-gradient(135deg, var(--aksu-primary-light) 0%, #f9f9f9 50%, var(--aksu-white) 100%);
+    min-height: 100vh;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--aksu-white);
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Header with Logo */
+header {
+    background: linear-gradient(135deg, var(--aksu-primary) 0%, #006837 100%);
+    color: var(--aksu-white);
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 12px rgba(0, 81, 44, 0.2);
+    border-bottom: 4px solid var(--aksu-accent);
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+}
+
+.university-logo {
+    height: 90px;
+    width: auto;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}
+
+.university-logo:hover {
+    transform: scale(1.03);
+}
+
+.title-container h1 {
+    color: var(--aksu-white);
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.title-container h2 {
+    color: var(--aksu-accent);
+    font-size: 1.3rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Main Content */
+.main-content {
+    padding: 2.5rem 2rem;
+}
+
+/* Search Box */
+.search-box {
+    max-width: 700px;
+    margin: 2rem auto 3rem;
+    display: flex;
+    gap: 12px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid var(--aksu-primary);
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    transition: all 0.3s;
+    background-color: var(--aksu-white);
+}
+
+.search-box input:focus {
+    border-color: var(--aksu-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(247, 148, 29, 0.2);
+}
+
+.search-box button {
+    background: var(--aksu-accent);
+    color: var(--aksu-white);
+    border: none;
+    padding: 15px 30px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.search-box button:hover {
+    background: var(--aksu-accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(247, 148, 29, 0.3);
+}
+
+/* Course Cards Grid */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.course-card {
+    background: var(--aksu-white);
+    border: 1px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    padding: 1.8rem;
+    transition: all 0.3s;
+    border-top: 5px solid var(--aksu-primary);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--box-shadow-hover);
+    border-color: var(--aksu-accent);
+}
+
+.course-card h3 {
+    color: var(--aksu-primary);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+    line-height: 1.4;
+}
+
+.course-card p {
+    color: var(--aksu-gray);
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.course-card button {
+    background: var(--aksu-primary);
+    color: var(--aksu-white);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s;
+    width: 100%;
+    margin-top: auto;
+}
+
+.course-card button:hover {
+    background: var(--aksu-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 81, 44, 0.3);
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(135deg, var(--aksu-gray-dark) 0%, #1a1a1a 100%);
+    color: var(--aksu-white);
+    padding: 2.5rem 2rem;
+    margin-top: 4rem;
+    border-top: 4px solid var(--aksu-accent);
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.project-credit {
+    color: var(--aksu-accent);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 1rem;
+    }
+    
+    .logo-title-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .university-logo {
+        height: 70px;
+    }
+    
+    .title-container h1 {
+        font-size: 1.6rem;
+    }
+    
+    .title-container h2 {
+        font-size: 1.1rem;
+    }
+    
+    .main-content {
+        padding: 1.5rem;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        margin: 1.5rem auto 2.5rem;
+    }
+    
+    .search-box button {
+        width: 100%;
+    }
+    
+    .courses-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .course-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .title-container h1 {
+        font-size: 1.4rem;
+    }
+    
+    .title-container h2 {
+        font-size: 1rem;
+    }
+    
+    .course-card h3 {
+        font-size: 1.2rem;
+    }
+}

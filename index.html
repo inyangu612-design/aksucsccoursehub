@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akwa Ibom State University Computer Science Course Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-container">
+                <div class="logo-title-wrapper">
+                    <img src="https://drive.google.com/uc?export=view&id=10woCdnXuEKEW9kEU9SYR867n7Vg8_oRW" 
+                         alt="AKSU Logo" 
+                         class="university-logo">
+                    <div class="title-container">
+                        <h1>Akwa Ibom State University</h1>
+                        <h2>Computer Science Course Hub</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for courses (e.g., CSC 311, data structure, database)">
+                <button onclick="searchCourses()">Search</button>
+            </div>
+
+            <div class="courses-grid">
+                <div class="course-card">
+                    <h3>CSC 311 - Data Structures</h3>
+                    <p>4 PDF materials available</p>
+                    <button onclick="viewCourse('csc311')">📚 View Materials (4)</button>
+                </div>
+                
+                <div class="course-card">
+                    <h3>CSC 351 - System Analysis</h3>
+                    <p>2 PDF materials available</p>
+                    <button onclick="viewCourse('csc351')">📚 View Materials (2)</button>
+                </div>
+                
+                <div class="course-card">
+                    <h3>CSC 381 - Human Computer Interaction</h3>
+                    <p>4 PDF materials available</p>
+                    <button onclick="viewCourse('csc381')">📚 View Materials (4)</button>
+                </div>
+                
+                <div class="course-card">
+                    <h3>CSC 321 - Database Systems</h3>
+                    <p>3 PDF materials available</p>
+                    <button onclick="viewCourse('csc321')">📚 View Materials (3)</button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2026 AKSU Computer Science Department</p>
+                <p class="project-credit">Industrial Training Project by Unyime Inyang</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>
